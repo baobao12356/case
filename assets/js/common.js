@@ -22,9 +22,17 @@ $(document).ready(
   (function($) {
     var wrap = {
       init: function() {
+        this.locaIndex();
         this.initHtml();
         this.scroll();
         // this.addCls();
+      },
+      locaIndex:function(){
+        var pathName=this.getPathName();
+        if(pathName==''){
+           window.location.href='index.html';
+           return ;
+        }
       },
       initHtml: function() {
         var imgs = this.getImgs();
